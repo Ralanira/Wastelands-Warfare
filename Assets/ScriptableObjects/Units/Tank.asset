@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9496207d05d296e4c9d2b93476fe6e84, type: 3}
+  m_Name: Tank
+  m_EditorClassIdentifier: 
+  type: 2
+  unitName: Tank
+  friendlyUnitPrefab: {fileID: 73994716613987084, guid: cd4874a1e76ae61439b885a698d38406, type: 3}
+  enemyUnitPrefab: {fileID: 73994716613987084, guid: 511fc10a4c595844099aae12de758264, type: 3}
+  icon: {fileID: 3328912580627016959, guid: 76e822487b0ced740b653b479edb480a, type: 3}
+  spawnTime: 2
+  description: All-purpose ranged attacker with medium stats.
+  baseStats:
+    costMinerals: 125
+    costEnergium: 20
+    costSupply: 2
+    aggroRange: 35
+    attackRange: 30
+    attackSpeed: 1
+    attack: 40
+    health: 300
+    armor: 3
+    speed: 6

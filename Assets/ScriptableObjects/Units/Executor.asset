@@ -1,0 +1,32 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9496207d05d296e4c9d2b93476fe6e84, type: 3}
+  m_Name: Executor
+  m_EditorClassIdentifier: 
+  type: 3
+  unitName: Executor
+  friendlyUnitPrefab: {fileID: 73994716613987084, guid: f15a60ae3695c484eb3081b4fbc03c88, type: 3}
+  enemyUnitPrefab: {fileID: 73994716613987084, guid: 511fc10a4c595844099aae12de758264, type: 3}
+  icon: {fileID: 3328912580627016959, guid: e772d538da70bde47afa7a35568f876d, type: 3}
+  spawnTime: 2
+  description: Experimental tank with unfair stats. Can easily solo any enemy base.
+  baseStats:
+    costMinerals: 1000
+    costEnergium: 1000
+    costSupply: 2
+    aggroRange: 45
+    attackRange: 40
+    attackSpeed: 1
+    attack: 160
+    health: 10000
+    armor: 30
+    speed: 6

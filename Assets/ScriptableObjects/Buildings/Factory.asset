@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 21cec758878d37848924be42f7e5730f, type: 3}
+  m_Name: Factory
+  m_EditorClassIdentifier: 
+  type: 1
+  name: Factory
+  buildingPrefab: {fileID: 5284849857274304250, guid: 95135f776f044e6418ad1f81a364f0ce, type: 3}
+  icon: {fileID: 3328912580627016959, guid: 536aabe4f319177438a1ad6c581775e3, type: 3}
+  description: Allows you to build Scouts and Heavy Tanks.
+  baseStats:
+    health: 1500
+    armor: 1
+    attack: 0
+    costMinerals: 150
+    costEnergium: 100
+    constructionTime: 7

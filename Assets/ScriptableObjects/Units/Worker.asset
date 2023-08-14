@@ -1,0 +1,33 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9496207d05d296e4c9d2b93476fe6e84, type: 3}
+  m_Name: Worker
+  m_EditorClassIdentifier: 
+  type: 0
+  unitName: Worker
+  friendlyUnitPrefab: {fileID: 73994716613987084, guid: 2bd2773d9d68aa0459bff342ddf4abb7, type: 3}
+  enemyUnitPrefab: {fileID: 73994716613987084, guid: 4b85cfb6e169bac479115c1075f370d0, type: 3}
+  icon: {fileID: 3328912580627016959, guid: 362558085ad9c8c468d4e3a5faab6540, type: 3}
+  spawnTime: 1
+  description: Worker unit. Can gather resources and build structures. Shouldn't
+    be in combat.
+  baseStats:
+    costMinerals: 50
+    costEnergium: 0
+    costSupply: 1
+    aggroRange: 0
+    attackRange: 0
+    attackSpeed: 1
+    attack: 0
+    health: 50
+    armor: 0
+    speed: 6
