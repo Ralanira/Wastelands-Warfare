@@ -16,11 +16,11 @@ namespace Units
         
         public void SetStatDisplayBasicUnit(UnitStatTypes.Base stats, bool isPlayer)
         {
-            maxHealth = stats.health;
-            armor = stats.armor;
+            maxHealth = stats.Health;
+            armor = stats.Armor;
             isPlayerUnit = isPlayer;
             currentHealth = maxHealth;
-            supplyCost = stats.costSupply;
+            supplyCost = stats.CostSupply;
         }
 
         public void SetStatDisplayBasicBuilding(Buildings.BuildingStatTypes.Base stats, bool isPlayer)

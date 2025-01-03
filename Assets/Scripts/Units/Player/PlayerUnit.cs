@@ -42,9 +42,9 @@ namespace Units.Player
             baseStats = unitType.baseStats;
             statDisplay.SetStatDisplayBasicUnit(baseStats, true);
             navAgent = GetComponent<NavMeshAgent>();  
-            navAgent.speed = baseStats.speed;
+            navAgent.speed = baseStats.Speed;
 
-            if(unitType.type == 0)
+            if(unitType.Type == UnitType.Worker)
             {
                 miningManager = GetComponent<Units.Basic.Workers.ResourceMiner>();
             }
@@ -58,7 +58,7 @@ namespace Units.Player
         {
             attackCooldown -= Time.deltaTime;
 
-            if(aggroTarget != null && hasMoveOrder && distance > baseStats.attackRange)
+            if(aggroTarget != null && hasMoveOrder && distance > baseStats.AttackRange)
             {
                 SetAggroTarget(null);
             }
@@ -124,7 +124,7 @@ namespace Units.Player
             hasMoveOrder = true;
             navAgent.stoppingDistance = 0f;
             navAgent.SetDestination(destination);
-            if(aggroTarget != null && distance > baseStats.attackRange)
+            if(aggroTarget != null && distance > baseStats.AttackRange)
             {
                 SetAggroTarget(null);
             }
@@ -170,7 +170,7 @@ namespace Units.Player
 
         private void MoveToAggroTarget()
         {
-            if (distance > baseStats.attackRange)
+            if (distance > baseStats.AttackRange)
             {
                 navAgent.SetDestination(aggroTarget.position);
             }
@@ -197,7 +197,7 @@ namespace Units.Player
 
         private void FindClosestEnemyNearby()
         {
-            rangeColliders = Physics.OverlapSphere(transform.position, baseStats.attackRange, UnitHandler.instance.eUnitLayer);
+            rangeColliders = Physics.OverlapSphere(transform.position, baseStats.AttackRange, UnitHandler.instance.eUnitLayer);
             if (rangeColliders.Length > 0)
             {
                 int k = 0;
@@ -218,9 +218,9 @@ namespace Units.Player
 
         private void Attack()
         {
-            if (attackCooldown <= 0 && distance <= baseStats.attackRange && cannonAiming.isAimed == true)
+            if (attackCooldown <= 0 && distance <= baseStats.AttackRange && cannonAiming.isAimed == true)
             {
-                attackCooldown = baseStats.attackSpeed;
+                attackCooldown = baseStats.AttackSpeed;
                 if(attackVFX)
                 {
                     attackVFX.Play();
@@ -235,7 +235,7 @@ namespace Units.Player
                 }
                 else
                 {
-                    aggroUnit.TakeDamage(baseStats.attack);
+                    aggroUnit.TakeDamage(baseStats.Attack);
                 }
             }
         }

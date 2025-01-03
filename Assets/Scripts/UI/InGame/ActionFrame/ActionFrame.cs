@@ -52,9 +52,9 @@ namespace UI.InGame.ActionPanel
                 btn.name = unit.name;
                 UI.InGame.TooltipBox.Tooltip tooltip = btn.gameObject.AddComponent(typeof(UI.InGame.TooltipBox.Tooltip)) as UI.InGame.TooltipBox.Tooltip;
                 tooltip.unitName = unit.unitName;
-                tooltip.mPrice = unit.baseStats.costMinerals.ToString();
-                tooltip.ePrice = unit.baseStats.costEnergium.ToString();
-                tooltip.sPrice = unit.baseStats.costSupply.ToString();
+                tooltip.mPrice = unit.baseStats.CostMinerals.ToString();
+                tooltip.ePrice = unit.baseStats.CostEnergium.ToString();
+                tooltip.sPrice = unit.baseStats.CostSupply.ToString();
                 tooltip.bTime = unit.spawnTime.ToString();
                 tooltip.message = unit.description;
                 GameObject icon = Instantiate(unit.icon, btn.transform);

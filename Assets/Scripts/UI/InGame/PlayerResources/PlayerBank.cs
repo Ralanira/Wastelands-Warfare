@@ -47,7 +47,7 @@ namespace UI.InGame.PlayerResources
                     pU = playerUnits.transform.GetChild(i).gameObject.transform.GetChild(k).gameObject.GetComponent<Units.Player.PlayerUnit>();
                     if(pU != null)
                     {
-                        startingUnitSupply = pU.baseStats.costSupply;
+                        startingUnitSupply = pU.baseStats.CostSupply;
                         currentSupplyUsed += startingUnitSupply;
                         pU = null;
                     }

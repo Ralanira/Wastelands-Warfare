@@ -19,10 +19,10 @@ public class UnitSpawner : MonoBehaviour
         if (IsUnit(objectToSpawn))
         {
             Units.BasicUnit unit = IsUnit(objectToSpawn);
-            if(UI.InGame.PlayerResources.PlayerBank.instance.HasEnoughResourses(unit.baseStats.costMinerals, unit.baseStats.costEnergium, unit.baseStats.costSupply))
+            if(UI.InGame.PlayerResources.PlayerBank.instance.HasEnoughResourses(unit.baseStats.CostMinerals, unit.baseStats.CostEnergium, unit.baseStats.CostSupply))
             {
-                UI.InGame.PlayerResources.PlayerBank.instance.ManageSupply(unit.baseStats.costSupply, 0);
-                UI.InGame.PlayerResources.PlayerBank.instance.WithdrawResources(unit.baseStats.costMinerals,unit.baseStats.costEnergium);
+                UI.InGame.PlayerResources.PlayerBank.instance.ManageSupply(unit.baseStats.CostSupply, 0);
+                UI.InGame.PlayerResources.PlayerBank.instance.WithdrawResources(unit.baseStats.CostMinerals,unit.baseStats.CostEnergium);
                 spawnQueue.Add(unit.spawnTime);
                 spawnOrder.Add(unit.friendlyUnitPrefab);
             }

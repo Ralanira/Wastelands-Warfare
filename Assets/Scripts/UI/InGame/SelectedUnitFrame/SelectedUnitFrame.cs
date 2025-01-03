@@ -86,10 +86,10 @@ namespace UI.InGame.SelectedObjectsData
                 pU = selectedUnits[0].gameObject.GetComponent<Units.Player.PlayerUnit>();
             }
             objectName.text = pU.unitType.unitName.ToString();
-            objectDamage.text = pU.baseStats.attack.ToString();
-            objectArmor.text = pU.baseStats.armor.ToString();
-            objectRange.text = pU.baseStats.attackRange.ToString();
-            objectSpeed.text = pU.baseStats.speed.ToString();
+            objectDamage.text = pU.baseStats.Attack.ToString();
+            objectArmor.text = pU.baseStats.Armor.ToString();
+            objectRange.text = pU.baseStats.AttackRange.ToString();
+            objectSpeed.text = pU.baseStats.Speed.ToString();
             objectIcon.sprite = pU.unitType.icon.gameObject.transform.GetComponentInChildren<Image>().sprite;  
             objectDescription.text = pU.unitType.description.ToString();
             HandleHealth();
