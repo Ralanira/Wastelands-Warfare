@@ -7,18 +7,10 @@ namespace Units
     [CreateAssetMenu(fileName = "New Unit", menuName = "New unit")]
     public class BasicUnit : ScriptableObject
     {
-        public enum unitType
-        {
-            Worker,
-            Scout,
-            Tank,
-            Executor,
-            Aircraft
-        }
-        
         [Header("Unit Settings")]
         [Space(15)]
-        public unitType type;
+        public UnitType Type;
+
         public string unitName;
         public GameObject friendlyUnitPrefab;
         public GameObject enemyUnitPrefab;

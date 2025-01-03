@@ -55,7 +55,7 @@ namespace Units.Enemy
         private void CheckForEnemyTargets()
         {
    
-            rangeColliders = Physics.OverlapSphere(transform.position, baseStats.aggroRange, UnitHandler.instance.pUnitLayer);
+            rangeColliders = Physics.OverlapSphere(transform.position, baseStats.AggroRange, UnitHandler.instance.pUnitLayer);
 
             for (int i = 0; i < rangeColliders.Length;)
             {
@@ -67,9 +67,9 @@ namespace Units.Enemy
 
         private void Attack()
         {
-            if (attackCooldown <= 0 && distance <= baseStats.attackRange && cannonAiming.isAimed == true)
+            if (attackCooldown <= 0 && distance <= baseStats.AttackRange && cannonAiming.isAimed == true)
             {
-                attackCooldown = baseStats.attackSpeed;
+                attackCooldown = baseStats.AttackSpeed;
                 if(attackVFX)
                 {
                     attackVFX.Play();
@@ -84,7 +84,7 @@ namespace Units.Enemy
                 }
                 else
                 {
-                    aggroUnit.TakeDamage(baseStats.attack);
+                    aggroUnit.TakeDamage(baseStats.Attack);
                 }
             }
         }
@@ -99,11 +99,11 @@ namespace Units.Enemy
             {
                 distance = Vector3.Distance(aggroTarget.position, transform.position);
 
-                if (distance <= baseStats.aggroRange * 1.3 && distance >= baseStats.attackRange)
+                if (distance <= baseStats.AggroRange * 1.3 && distance >= baseStats.AttackRange)
                 {
                     navAgent.SetDestination(aggroTarget.position);
                 }
-                if (distance <= baseStats.attackRange)
+                if (distance <= baseStats.AttackRange)
                 {
                     navAgent.SetDestination(transform.position);
                 }

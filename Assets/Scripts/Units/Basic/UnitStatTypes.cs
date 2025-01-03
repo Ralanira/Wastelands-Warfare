@@ -9,7 +9,27 @@ namespace Units
         [System.Serializable]
         public class Base
         {
-            public float costMinerals, costEnergium, costSupply, aggroRange, attackRange, attackSpeed, attack, health, armor, speed;
+            [SerializeField] private float ñostMinerals;
+            [SerializeField] private float costEnergium;
+            [SerializeField] private float costSupply;
+            [SerializeField] private float aggroRange;
+            [SerializeField] private float attackRange;
+            [SerializeField] private float attackSpeed;
+            [SerializeField] private float attack;
+            [SerializeField] private float health;
+            [SerializeField] private float armor;
+            [SerializeField] private float speed;
+
+            public float CostMinerals => ñostMinerals;
+            public float CostEnergium => costEnergium;
+            public float CostSupply => costSupply;
+            public float AggroRange => aggroRange;
+            public float AttackRange => attackRange;
+            public float AttackSpeed => attackSpeed;
+            public float Attack => attack;
+            public float Health => health;
+            public float Armor => armor;
+            public float Speed => speed;
         }
     }
 }

@@ -13,11 +13,11 @@ public class ProjectilesBehaviour : MonoBehaviour
     {
         if (gameObject.layer == 8)
         {
-            damage = transform.parent.parent.parent.parent.parent.GetComponent<Units.Player.PlayerUnit>().baseStats.attack;
+            damage = transform.parent.parent.parent.parent.parent.GetComponent<Units.Player.PlayerUnit>().baseStats.Attack;
         }
         else if (gameObject.layer == 9)
         {
-            damage = transform.parent.parent.parent.parent.parent.GetComponent<Units.Enemy.EnemyUnit>().baseStats.attack;
+            damage = transform.parent.parent.parent.parent.parent.GetComponent<Units.Enemy.EnemyUnit>().baseStats.Attack;
         }
         ps = GetComponent<ParticleSystem>();
         projectilesSaviour = GameObject.Find("Projectiles Saviour");
